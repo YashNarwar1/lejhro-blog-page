@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: rgb(244, 244, 244);
+  overflow-x: hidden;
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1;
+}
+
+.side-bar {
+  position: absolute;
+  height: 100vh;
+  width: 25rem;
+  right: -25rem;
+  background-color: white;
+  transition: right 0.8s ease;
+  z-index: 2;
+  display: none;
+}
+
+.side-bar.opened {
+  right: 0;
+  display: block;
+}
+
+body.opened {
+  overflow: hidden;
+}
+
+.side-bar main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(244, 244, 244);
+}
+.side-bar button {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: none;
+  background-color: black;
+  color: white;
+  margin-left: 1.4rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.side-bar button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.side-bar img {
+  width: 14rem;
+  margin: 1rem 0 1rem 2rem;
+}
+
+.side-bar section {
+  margin-top: 2rem;
+}
+
+.side-bar section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.side-bar section ul li {
+  margin-top: 1rem;
+  font-weight: 800;
+}
+
+.side-bar section ul li:hover {
+  color: rgb(44, 127, 191);
+  cursor: pointer;
+}
+
+header {
+  background-color: rgb(214, 147, 44);
+  padding: 4rem 10rem 5rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin-top: 4rem;
+  font-size: 3rem;
+  color: white;
+  font-weight: 400;
+}
+
+#logo {
+  width: 15rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button img {
+  height: 40px;
+  width: 40px;
+}
+
+nav button {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  margin-left: 2rem;
+
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.707);
+}
+
+#main-section {
+  margin: 4rem 10rem;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.content h2,
+p,
+h3,
+h4 {
+  margin-top: 1.5rem;
+}
+
+#special,
+span {
+  font-weight: 700;
+}
+
+footer li {
+  width: 30px;
+}
+
+footer {
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 8rem 0 4rem 0;
+  border-top: 10px solid rgb(44, 127, 191);
+}
+
+footer h2 {
+  padding-left: 20px;
+}
+
+.social ul {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.social li {
+  cursor: pointer;
+}
+
+.social li:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.817);
+  border-radius: 30%;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #444;
+  padding: 10px 0;
+}
+
+@media only screen and (max-width: 1222px) {
+  #main-nav ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 4rem 5rem 5rem 5rem;
+  }
+  #main-section {
+    margin: 2rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header {
+    padding: 2rem;
+  }
+  #main-section {
+    margin: 10px;
+  }
+}
